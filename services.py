@@ -41,3 +41,49 @@ def delete_short_url(short_code:str)->None:
         )
     delete_url(existing)
 
+def get_short_url(short_code:str)->Url:
+    url = get_url_by_shortcode(short_code)
+    if not url:
+        raise InvalidRequestError(
+            message = "Shortcode does not exist"
+        )
+    return url
+
+def update_short_url(short_code:str, new_url:str)->Url:
+    existing = get_url_by_shortcode(short_code)
+    if not existing:
+        raise InvalidRequestError(
+            message = "Shortcode does not exist"
+        )
+    
+    if not is_valid_url(new_url):
+        raise InvalidRequestError(
+            message = "Invalid URL format",
+            details = {"url":"Must be a valid HTTP or HTTPS URL"},
+        )
+    
+    existing.original_url = new_url
+    existing.updated_at = datetime.utcnow()
+    save_url(existing)
+
+    return existing
+
+def redirect_short_url(short_code:str)->str:
+    url = get_url_by_shortcode(short_code)
+    if not url:
+        raise InvalidRequestError(
+            message = "Shortcode does not exist"
+        )
+    url.access_count +=1
+    url.updated_at = datetime.utcnow()
+
+    save_url(url)
+    return url.original_url
+
+def get_url_stats(short_code:str)->Url:
+    url = get_url_by_shortcode(short_code)
+    if not url:
+        raise InvalidRequestError(
+            message = "Shortcode does not exist"
+        )
+    return url
