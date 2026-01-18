@@ -19,3 +19,7 @@ def save_url(url:Url)->None:
         raise e
 
 
+def delete_url(url:Url)->None:
+    with Session(engine) as session:
+        session.delete(url)
+        session.commit()
