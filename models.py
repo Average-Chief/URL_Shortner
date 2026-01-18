@@ -1,9 +1,6 @@
-from sqlmodel import SQLModel, Field, create_engine
+from sqlmodel import SQLModel, Field
 from typing import Optional
-from datetime import timedelta, datetime
-
-DATABASE_URL = "sqlite:///test.db"
-engine = create_engine(DATABASE_URL, echo=True)
+from datetime import datetime
 
 class Url(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
@@ -13,5 +10,5 @@ class Url(SQLModel, table=True):
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
-def create_db():
+def create_db(engine):
     SQLModel.metadata.create_all(engine)
