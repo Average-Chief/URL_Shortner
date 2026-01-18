@@ -1,4 +1,5 @@
-from models import engine, Url
+from models import Url
+from db import engine
 from sqlmodel import Session, select
 
 def get_url_by_shortcode(short_code:str)->Url|None:
