@@ -86,4 +86,8 @@ def get_url_stats(short_code:str)->Url:
         raise InvalidRequestError(
             message = "Shortcode does not exist"
         )
-    return url
+    return {
+        "short_code": url.short_code,
+        "original_url": url.original_url,
+        "access_count": url.access_count,
+    }

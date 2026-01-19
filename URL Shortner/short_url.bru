@@ -1,0 +1,22 @@
+meta {
+  name: short_url
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://127.0.0.1:8000/shorten
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "url":"https://youtu.be/4vKy2RGd0e4?si=_U5HN5NQ3NXnm4I7"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

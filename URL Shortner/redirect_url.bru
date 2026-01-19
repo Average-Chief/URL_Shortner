@@ -1,0 +1,16 @@
+meta {
+  name: redirect_url
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://127.0.0.1:8000/shorten/r/{{twitter_short_code}}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
