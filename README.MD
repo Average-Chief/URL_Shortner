@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python">
-  <img src="https://img.shields.io/badge/FastAPI-Backend-black?style=for-the-badge&logo=flask">
+  <img src="https://img.shields.io/badge/FastAPI-Backend-black?style=for-the-badge&logo=fastapi">
   <img src="https://img.shields.io/badge/RESTful-API-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/SQLite-Database-blue?style=for-the-badge&logo=sqlite">
   <img src="https://img.shields.io/badge/SQLModel-ORM-green?style=for-the-badge">
