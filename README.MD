@@ -1,7 +1,7 @@
 # 🔗 URL Shortener API
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/Python-3.6+-blue?style=for-the-badge&logo=python">
   <img src="https://img.shields.io/badge/FastAPI-Backend-black?style=for-the-badge&logo=fastapi">
   <img src="https://img.shields.io/badge/RESTful-API-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/SQLite-Database-blue?style=for-the-badge&logo=sqlite">
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTJ6ZWwxMHF1aDN2YWp2NzNtcmF5NjlvZ3RvNTVhaGswaHN3eGFwNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/loXfQtPqLxGmbLs9h2/giphy.gif" alt="gif" height="505" width="300"/>
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanZiMjlzcXc2OXZkc2xkZ2hqMnh5MjN3cnVoeXBxYXN1ZjRzNHlucyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CTX0ivSQbI78A/giphy.gif" alt="gif" height="505" width="300"/>
 </p>
 
 
@@ -85,3 +85,4 @@ It’s about:
 - Designing APIs that don’t lie
 
 
+Project Inspiration: https://roadmap.sh/projects/url-shortening-service
